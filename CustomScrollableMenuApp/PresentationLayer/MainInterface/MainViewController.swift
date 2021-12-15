@@ -21,7 +21,7 @@ class Constants {
     ]
 }
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var menuView: UIView!
     
@@ -76,14 +76,14 @@ class ViewController: UIViewController {
 //    }
 }
 
-extension ViewController: SclollableMenuModuleOutput {
+extension MainViewController: SclollableMenuModuleOutput {
     func action(item: Int) {
         print("item \(item)")
     }
 }
 
 // MARK: - UIPageViewControllerDataSource
-//extension ViewController: UIPageViewControllerDataSource {
+//extension MainViewController: UIPageViewControllerDataSource {
 //    func pageViewController(_ pageViewController: UIPageViewController,
 //                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
 //        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
