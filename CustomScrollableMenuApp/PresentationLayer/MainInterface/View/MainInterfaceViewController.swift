@@ -1,27 +1,12 @@
 //
-//  ViewController.swift
-//  TestScrollApp
+//  MainInterfaceViewController.swift
 //
-//  Created by Elizaveta Rudenko on 28.07.2021.
+//  Created by Rudenko Elizabeth on 12/01/2022.
 //
 
 import UIKit
 
-class Constants {
-    enum BrowsePageType: Int, CaseIterable {
-        case item1, item2, item3, item4, item5, item6
-    }
-    static let submenuTitles: [BrowsePageType: String] = [
-        .item1: "Menu item 1",
-        .item2: "Menu item 2",
-        .item3: "Menu item 3",
-        .item4: "Menu item 4",
-        .item5: "Menu item 5",
-        .item6: "Menu item 6"
-    ]
-}
-
-class MainViewController: UIViewController {
+class MainInterfaceViewController: UIViewController, MainInterfaceViewInput {
     
     @IBOutlet weak var menuView: UIView!
     
@@ -31,9 +16,23 @@ class MainViewController: UIViewController {
     private var orderedViewControllers = [UIViewController]()
     private var currentIndex = 0
     
+    var output: MainInterfaceViewOutput!
+
+    // MARK: Life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        MainInterfaceModuleConfigurator().configureModuleForViewInput(viewInput: self)
+        output.viewIsReady()
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupMenu()
+    }
+
+
+    // MARK: MainInterfaceViewInput
+    func setupInitialState() {
     }
     
     func setupMenu() {
@@ -41,9 +40,9 @@ class MainViewController: UIViewController {
         let viewController = UIViewController.instantiateFromStoryboard(identifier) as! SclollableMenuViewController
         let submenuItems: [SclollableMenuItem] = {
             var items = [SclollableMenuItem]()
-            Constants.BrowsePageType.allCases.forEach {
+            MainInterfaceConstants.BrowsePageType.allCases.forEach {
                 let item = SclollableMenuItem(type: $0.rawValue,
-                                              title: Constants.submenuTitles[$0]!)
+                                              title: MainInterfaceConstants.submenuTitles[$0]!)
                 items.append(item)
             }
             return items
@@ -76,7 +75,7 @@ class MainViewController: UIViewController {
 //    }
 }
 
-extension MainViewController: SclollableMenuModuleOutput {
+extension MainInterfaceViewController: SclollableMenuModuleOutput {
     func action(item: Int) {
         print("item \(item)")
     }
