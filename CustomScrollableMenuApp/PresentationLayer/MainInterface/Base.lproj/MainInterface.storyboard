@@ -24,6 +24,10 @@
                                     <constraint firstAttribute="height" constant="40" id="taV-m9-7iZ"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOk-9R-gEM">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,6 +35,10 @@
                             <constraint firstItem="8fP-xv-MgN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hon-40-exz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8fP-xv-MgN" secondAttribute="trailing" id="MK8-z9-nFI"/>
                             <constraint firstItem="8fP-xv-MgN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MZR-Rp-Dwa"/>
+                            <constraint firstItem="xOk-9R-gEM" firstAttribute="top" secondItem="8fP-xv-MgN" secondAttribute="bottom" id="Th4-pc-Jn9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xOk-9R-gEM" secondAttribute="trailing" id="gNU-JZ-SD4"/>
+                            <constraint firstItem="xOk-9R-gEM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xAU-bE-f6l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xOk-9R-gEM" secondAttribute="bottom" id="zck-u8-6FR"/>
                         </constraints>
                     </view>
                     <connections>

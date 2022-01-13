@@ -8,7 +8,8 @@ import UIKit
 
 class MainInterfaceViewController: UIViewController, MainInterfaceViewInput {
     
-    @IBOutlet weak var menuView: UIView!
+    @IBOutlet private weak var menuView: UIView!
+    @IBOutlet private weak var pageView: UIView!
     
     private var subtitleMenuView: SclollableMenuViewController?
     private var subtitleMenuModuleInput: SclollableMenuModuleInput?

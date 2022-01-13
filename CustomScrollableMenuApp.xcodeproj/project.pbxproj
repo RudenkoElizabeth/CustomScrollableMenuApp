@@ -19,6 +19,13 @@
 		210BCF2B278F63CF004401EB /* MainInterfaceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210BCF2A278F63CF004401EB /* MainInterfaceConfigurator.swift */; };
 		210BCF2E278F63D9004401EB /* MainInterfaceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210BCF2D278F63D9004401EB /* MainInterfaceProtocols.swift */; };
 		210BCF30278F640C004401EB /* MainInterfaceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210BCF2F278F640C004401EB /* MainInterfaceConstants.swift */; };
+		2126FDCA2790BFD70031A700 /* PageInterfacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2126FDBF2790BFD70031A700 /* PageInterfacePresenter.swift */; };
+		2126FDCB2790BFD70031A700 /* PageInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2126FDC12790BFD70031A700 /* PageInterfaceViewController.swift */; };
+		2126FDCC2790BFD70031A700 /* PageInterfaceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2126FDC32790BFD70031A700 /* PageInterfaceConfigurator.swift */; };
+		2126FDCD2790BFD70031A700 /* PageInterfaceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2126FDC52790BFD70031A700 /* PageInterfaceProtocols.swift */; };
+		2126FDCE2790BFD70031A700 /* PageInterfaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2126FDC72790BFD70031A700 /* PageInterfaceInteractor.swift */; };
+		2126FDCF2790BFD70031A700 /* PageInterfaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2126FDC92790BFD70031A700 /* PageInterfaceRouter.swift */; };
+		2126FDD12790BFFE0031A700 /* PageInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2126FDD02790BFFE0031A700 /* PageInterface.storyboard */; };
 		2186142E27549B8B00443829 /* SclollableMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2186142227549B8B00443829 /* SclollableMenu.storyboard */; };
 		2186142F27549B8B00443829 /* SclollableMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186142427549B8B00443829 /* SclollableMenuPresenter.swift */; };
 		2186143027549B8B00443829 /* SclollableMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186142627549B8B00443829 /* SclollableMenuCell.swift */; };
@@ -45,6 +52,13 @@
 		210BCF2A278F63CF004401EB /* MainInterfaceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceConfigurator.swift; sourceTree = "<group>"; };
 		210BCF2D278F63D9004401EB /* MainInterfaceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceProtocols.swift; sourceTree = "<group>"; };
 		210BCF2F278F640C004401EB /* MainInterfaceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceConstants.swift; sourceTree = "<group>"; };
+		2126FDBF2790BFD70031A700 /* PageInterfacePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageInterfacePresenter.swift; sourceTree = "<group>"; };
+		2126FDC12790BFD70031A700 /* PageInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageInterfaceViewController.swift; sourceTree = "<group>"; };
+		2126FDC32790BFD70031A700 /* PageInterfaceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageInterfaceConfigurator.swift; sourceTree = "<group>"; };
+		2126FDC52790BFD70031A700 /* PageInterfaceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageInterfaceProtocols.swift; sourceTree = "<group>"; };
+		2126FDC72790BFD70031A700 /* PageInterfaceInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageInterfaceInteractor.swift; sourceTree = "<group>"; };
+		2126FDC92790BFD70031A700 /* PageInterfaceRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageInterfaceRouter.swift; sourceTree = "<group>"; };
+		2126FDD02790BFFE0031A700 /* PageInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageInterface.storyboard; sourceTree = "<group>"; };
 		2186142227549B8B00443829 /* SclollableMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SclollableMenu.storyboard; sourceTree = "<group>"; };
 		2186142427549B8B00443829 /* SclollableMenuPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SclollableMenuPresenter.swift; sourceTree = "<group>"; };
 		2186142627549B8B00443829 /* SclollableMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SclollableMenuCell.swift; sourceTree = "<group>"; };
@@ -142,6 +156,68 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		2126FDBD2790BFD70031A700 /* PageInterface */ = {
+			isa = PBXGroup;
+			children = (
+				2126FDD02790BFFE0031A700 /* PageInterface.storyboard */,
+				2126FDC02790BFD70031A700 /* View */,
+				2126FDBE2790BFD70031A700 /* Presenter */,
+				2126FDC62790BFD70031A700 /* Interactor */,
+				2126FDC82790BFD70031A700 /* Router */,
+				2126FDC22790BFD70031A700 /* Configurator */,
+				2126FDC42790BFD70031A700 /* Protocols */,
+			);
+			path = PageInterface;
+			sourceTree = "<group>";
+		};
+		2126FDBE2790BFD70031A700 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2126FDBF2790BFD70031A700 /* PageInterfacePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2126FDC02790BFD70031A700 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2126FDC12790BFD70031A700 /* PageInterfaceViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2126FDC22790BFD70031A700 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				2126FDC32790BFD70031A700 /* PageInterfaceConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		2126FDC42790BFD70031A700 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2126FDC52790BFD70031A700 /* PageInterfaceProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2126FDC62790BFD70031A700 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2126FDC72790BFD70031A700 /* PageInterfaceInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2126FDC82790BFD70031A700 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2126FDC92790BFD70031A700 /* PageInterfaceRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		2186142127549B8B00443829 /* SclollableMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				21B466F0276A7F97008F3273 /* MainInterface */,
+				2126FDBD2790BFD70031A700 /* PageInterface */,
 				2186142127549B8B00443829 /* SclollableMenu */,
 			);
 			path = PresentationLayer;
@@ -292,6 +369,7 @@
 				2107D70626B1896600B1312C /* LaunchScreen.storyboard in Resources */,
 				2107D70326B1896600B1312C /* Assets.xcassets in Resources */,
 				2186142E27549B8B00443829 /* SclollableMenu.storyboard in Resources */,
+				2126FDD12790BFFE0031A700 /* PageInterface.storyboard in Resources */,
 				2107D70126B1896300B1312C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,8 +383,12 @@
 			files = (
 				218614392754AB8900443829 /* StringHelper.swift in Sources */,
 				2186143227549B8B00443829 /* SclollableMenuConfigurator.swift in Sources */,
+				2126FDCF2790BFD70031A700 /* PageInterfaceRouter.swift in Sources */,
 				210BCF28278F63C5004401EB /* MainInterfaceRouter.swift in Sources */,
+				2126FDCE2790BFD70031A700 /* PageInterfaceInteractor.swift in Sources */,
 				210BCF2B278F63CF004401EB /* MainInterfaceConfigurator.swift in Sources */,
+				2126FDCB2790BFD70031A700 /* PageInterfaceViewController.swift in Sources */,
+				2126FDCD2790BFD70031A700 /* PageInterfaceProtocols.swift in Sources */,
 				2186143327549B8B00443829 /* SclollableMenuConstants.swift in Sources */,
 				2107D6FA26B1896300B1312C /* AppDelegate.swift in Sources */,
 				2186143427549B8B00443829 /* SclollableMenuProtocols.swift in Sources */,
@@ -314,8 +396,10 @@
 				2186142F27549B8B00443829 /* SclollableMenuPresenter.swift in Sources */,
 				2107D6FC26B1896300B1312C /* SceneDelegate.swift in Sources */,
 				218614372754AA8900443829 /* UIViewControllerHelper.swift in Sources */,
+				2126FDCA2790BFD70031A700 /* PageInterfacePresenter.swift in Sources */,
 				2186143127549B8B00443829 /* SclollableMenuViewController.swift in Sources */,
 				2186143027549B8B00443829 /* SclollableMenuCell.swift in Sources */,
+				2126FDCC2790BFD70031A700 /* PageInterfaceConfigurator.swift in Sources */,
 				210BCF1F278F6316004401EB /* MainInterfaceViewController.swift in Sources */,
 				210BCF2E278F63D9004401EB /* MainInterfaceProtocols.swift in Sources */,
 				210BCF22278F6323004401EB /* MainInterfacePresenter.swift in Sources */,
