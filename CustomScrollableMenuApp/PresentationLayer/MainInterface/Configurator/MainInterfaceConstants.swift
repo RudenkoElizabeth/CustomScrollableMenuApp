@@ -8,10 +8,10 @@
 import Foundation
 
 class MainInterfaceConstants {
-    enum BrowsePageType: Int, CaseIterable {
+    enum PageType: Int, CaseIterable {
         case item1, item2, item3, item4, item5, item6
     }
-    static let submenuTitles: [BrowsePageType: String] = [
+    static let submenuTitles: [PageType: String] = [
         .item1: "Menu item 1",
         .item2: "Menu item 2",
         .item3: "Menu item 3",

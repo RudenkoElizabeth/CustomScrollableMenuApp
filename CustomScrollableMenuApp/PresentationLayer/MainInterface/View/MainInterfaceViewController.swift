@@ -41,7 +41,7 @@ class MainInterfaceViewController: UIViewController, MainInterfaceViewInput {
         let viewController = UIViewController.instantiateFromStoryboard(identifier) as! SclollableMenuViewController
         let submenuItems: [SclollableMenuItem] = {
             var items = [SclollableMenuItem]()
-            MainInterfaceConstants.BrowsePageType.allCases.forEach {
+            MainInterfaceConstants.PageType.allCases.forEach {
                 let item = SclollableMenuItem(type: $0.rawValue,
                                               title: MainInterfaceConstants.submenuTitles[$0]!)
                 items.append(item)

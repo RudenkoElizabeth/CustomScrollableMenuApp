@@ -7,16 +7,19 @@
 import UIKit
 
 class PageInterfaceViewController: UIViewController, PageInterfaceViewInput {
-
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    
     var output: PageInterfaceViewOutput!
-
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
-
+    
     // MARK: PageInterfaceViewInput
     func setupInitialState() {
+        titleLabel.text = output.getTitle()
     }
 }

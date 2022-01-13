@@ -6,7 +6,7 @@
 //
 
 class PageInterfaceInteractor: PageInterfaceInteractorInput {
-
+    
     weak var output: PageInterfaceInteractorOutput!
-
+    
 }

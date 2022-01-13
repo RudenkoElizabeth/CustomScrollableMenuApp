@@ -4,26 +4,27 @@
 //  Created by Rudenko Elizabeth on 13/01/2022.
 //
 
-protocol PageInterfaceViewInput: class {
+protocol PageInterfaceViewInput: AnyObject {
     func setupInitialState()
 }
 
 protocol PageInterfaceViewOutput {
     func viewIsReady()
+    func getTitle() -> String?
 }
 
-protocol PageInterfaceModuleInput: class {
-
+protocol PageInterfaceModuleInput: AnyObject {
+    
 }
 
 protocol PageInterfaceInteractorInput {
-
+    
 }
 
-protocol PageInterfaceInteractorOutput: class {
-
+protocol PageInterfaceInteractorOutput: AnyObject {
+    
 }
 
 protocol PageInterfaceRouterInput {
-
+    
 }

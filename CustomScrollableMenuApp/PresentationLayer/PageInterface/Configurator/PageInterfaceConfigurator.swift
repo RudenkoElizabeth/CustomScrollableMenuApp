@@ -7,26 +7,29 @@
 import UIKit
 
 class PageInterfaceModuleConfigurator {
-
-    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
+    
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController,
+                                                       pageType: MainInterfaceConstants.PageType) {
         if let viewController = viewInput as? PageInterfaceViewController {
-            configure(viewController: viewController)
+            configure(viewController: viewController, pageType: pageType)
         }
     }
-
-    private func configure(viewController: PageInterfaceViewController) {
-
+    
+    private func configure(viewController: PageInterfaceViewController,
+                           pageType: MainInterfaceConstants.PageType) {
+        
         let router = PageInterfaceRouter()
-
+        
         let presenter = PageInterfacePresenter()
         presenter.view = viewController
         presenter.router = router
-
+        presenter.pageType = pageType
+        
         let interactor = PageInterfaceInteractor()
         interactor.output = presenter
-
+        
         presenter.interactor = interactor
         viewController.output = presenter
     }
-
+    
 }
