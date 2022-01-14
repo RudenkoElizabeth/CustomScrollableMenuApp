@@ -43,6 +43,7 @@
                     </view>
                     <connections>
                         <outlet property="menuView" destination="8fP-xv-MgN" id="usp-8Q-eZU"/>
+                        <outlet property="pageView" destination="xOk-9R-gEM" id="S3a-Ig-bip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

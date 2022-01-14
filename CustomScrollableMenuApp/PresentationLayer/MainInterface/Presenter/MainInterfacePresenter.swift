@@ -12,5 +12,10 @@ class MainInterfacePresenter: MainInterfaceModuleInput, MainInterfaceViewOutput,
 
     func viewIsReady() {
         view.setupInitialState()
+        router.setupSubmodules()
+    }
+    
+    func changeSelected(item: Int) {
+        print("Change for page: \(item)")
     }
 }

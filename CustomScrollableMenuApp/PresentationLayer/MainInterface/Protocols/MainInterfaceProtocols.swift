@@ -5,13 +5,12 @@
 //
 
 protocol MainInterfaceViewInput: AnyObject {
-
     func setupInitialState()
 }
 
 protocol MainInterfaceViewOutput {
-
     func viewIsReady()
+    func changeSelected(item: Int)
 }
 
 protocol MainInterfaceModuleInput: AnyObject {
@@ -27,5 +26,5 @@ protocol MainInterfaceInteractorOutput: AnyObject {
 }
 
 protocol MainInterfaceRouterInput {
-
+    func setupSubmodules()
 }

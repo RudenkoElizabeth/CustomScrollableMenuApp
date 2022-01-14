@@ -19,4 +19,6 @@ class MainInterfaceConstants {
         .item5: "Menu item 5",
         .item6: "Menu item 6"
     ]
+    static let menuIdentifier = "SclollableMenu"
+    static let pageIdentifier = "PageInterface"
 }
