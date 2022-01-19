@@ -9,7 +9,7 @@ class PageInterfacePresenter: PageInterfaceModuleInput, PageInterfaceViewOutput,
     weak var view: PageInterfaceViewInput!
     var interactor: PageInterfaceInteractorInput!
     var router: PageInterfaceRouterInput!
-    var pageType: MainInterfaceConstants.PageType!
+    var pageType: ItemType!
     
     func viewIsReady() {
         view.setupInitialState()

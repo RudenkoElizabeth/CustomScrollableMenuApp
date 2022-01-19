@@ -22,9 +22,9 @@ protocol SclollableMenuViewOutput {
 }
 
 protocol SclollableMenuModuleInput: AnyObject {
-    func change(item: Int)
+    func change(item: ItemType)
 }
 
 protocol SclollableMenuModuleOutput: AnyObject {
-    func action(item: Int)
+    func action(item: ItemType)
 }

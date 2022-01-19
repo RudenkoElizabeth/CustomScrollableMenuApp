@@ -6,11 +6,6 @@
 
 import Foundation
 
-struct SclollableMenuItem {
-    let type: Int
-    let title: String
-}
-
 class SclollableMenuConstants {
     static let cellIdentifier = "SclollableMenuCell"
 }

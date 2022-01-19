@@ -13,17 +13,11 @@ protocol MainInterfaceViewOutput {
     func changeSelected(item: Int)
 }
 
-protocol MainInterfaceModuleInput: AnyObject {
+protocol MainInterfaceModuleInput: AnyObject { }
 
-}
+protocol MainInterfaceInteractorInput { }
 
-protocol MainInterfaceInteractorInput {
-
-}
-
-protocol MainInterfaceInteractorOutput: AnyObject {
-
-}
+protocol MainInterfaceInteractorOutput: AnyObject { }
 
 protocol MainInterfaceRouterInput {
     func setupSubmodules()

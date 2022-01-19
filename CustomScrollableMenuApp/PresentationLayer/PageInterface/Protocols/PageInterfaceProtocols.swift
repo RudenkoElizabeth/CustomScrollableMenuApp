@@ -13,18 +13,10 @@ protocol PageInterfaceViewOutput {
     func getTitle() -> String?
 }
 
-protocol PageInterfaceModuleInput: AnyObject {
-    
-}
+protocol PageInterfaceModuleInput: AnyObject { }
 
-protocol PageInterfaceInteractorInput {
-    
-}
+protocol PageInterfaceInteractorInput { }
 
-protocol PageInterfaceInteractorOutput: AnyObject {
-    
-}
+protocol PageInterfaceInteractorOutput: AnyObject { }
 
-protocol PageInterfaceRouterInput {
-    
-}
+protocol PageInterfaceRouterInput { }

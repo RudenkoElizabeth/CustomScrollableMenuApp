@@ -9,14 +9,14 @@ import UIKit
 class PageInterfaceModuleConfigurator {
     
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController,
-                                                       pageType: MainInterfaceConstants.PageType) {
+                                                       pageType: ItemType) {
         if let viewController = viewInput as? PageInterfaceViewController {
             configure(viewController: viewController, pageType: pageType)
         }
     }
     
     private func configure(viewController: PageInterfaceViewController,
-                           pageType: MainInterfaceConstants.PageType) {
+                           pageType: ItemType) {
         
         let router = PageInterfaceRouter()
         

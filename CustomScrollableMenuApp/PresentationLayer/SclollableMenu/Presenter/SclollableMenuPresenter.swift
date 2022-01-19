@@ -24,11 +24,11 @@ class SclollableMenuPresenter: SclollableMenuModuleInput, SclollableMenuViewOutp
     }
     
     func action(item: Int) {
-        moduleOutput.action(item: item)
+        moduleOutput.action(item: menuItems[item].type)
     }
     
     // MARK: SclollableMenuModuleInput
-    func change(item: Int) {
-        view.setSelected(item: item)
+    func change(item: ItemType) {
+        view.setSelected(item: item.rawValue)
     }
 }
