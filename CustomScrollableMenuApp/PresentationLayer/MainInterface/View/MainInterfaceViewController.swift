@@ -27,27 +27,31 @@ class MainInterfaceViewController: UIViewController, MainInterfaceViewInput {
     
     // MARK: MainInterfaceViewInput
     func setupInitialState() {
+        pageViewController.dataSource = self
+        pageViewController.delegate = self
+        addChild(viewController: pageViewController, to: pageView)
     }
     
     func setMenu(viewController: UIViewController) {
         addChild(viewController: viewController, to: menuView)
     }
     
-    //    func setViewControllerFor(pageType: SubmenuBrowseConstants.BrowsePageType) {
-    //        let nextIndex = output.getIndexOf(page: pageType)
-    //        let direction: UIPageViewController.NavigationDirection = currentIndex > nextIndex ? .reverse : .forward
-    //        currentIndex = nextIndex
-    //        let viewController = orderedViewControllers[currentIndex]
-    //        setViewControllers([viewController],
-    //                           direction: direction,
-    //                           animated: true,
-    //                           completion: nil)
-    //    }
-    //
-    //    func addViewController(_ viewController: UIViewController) {
-    //        orderedViewControllers.append(viewController)
-    //        if orderedViewControllers.count == output.pages.count {
-    //            setViewControllerFor(pageType: output.pages.first!)
-    //        }
-    //    }
+    func setViewControllerFor(pageType: ItemType) {
+        guard let nextIndex = MainInterfaceConstants.items.firstIndex(where: { $0.type == pageType }) else { return }
+        let direction: UIPageViewController.NavigationDirection = currentIndex > nextIndex ? .reverse : .forward
+        currentIndex = nextIndex
+        let viewController = orderedViewControllers[currentIndex]
+        pageViewController.setViewControllers([viewController],
+                                              direction: direction,
+                                              animated: true,
+                                              completion: nil)
+    }
+    
+    func addViewController(_ viewController: UIViewController) {
+        orderedViewControllers.append(viewController)
+        let items = MainInterfaceConstants.items
+        if orderedViewControllers.count == items.count, let type = items.first?.type {
+            setViewControllerFor(pageType: type)
+        }
+    }
 }

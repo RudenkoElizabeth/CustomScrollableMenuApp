@@ -7,7 +7,7 @@
 import UIKit
 
 class MainInterfaceRouter: MainInterfaceRouterInput {
-
+    
     weak var view: MainInterfaceViewController!
     
     private var subtitleMenuView: UIViewController?
@@ -15,6 +15,7 @@ class MainInterfaceRouter: MainInterfaceRouterInput {
     
     func setupSubmodules() {
         setupMenu()
+        setupPages()
     }
     
     private func setupMenu() {
@@ -26,6 +27,16 @@ class MainInterfaceRouter: MainInterfaceRouterInput {
                                          menuItemsSize: 26,
                                          moduleOutput: self)
         view.setMenu(viewController: viewController)
+    }
+    
+    private func setupPages() {
+        MainInterfaceConstants.items.forEach { item in
+            let identifier = MainInterfaceConstants.pageIdentifier
+            let viewController = UIViewController.instantiateFromStoryboard(identifier)
+            PageInterfaceModuleConfigurator().configureModuleForViewInput(viewInput: viewController, pageType: item.type)
+            view.addViewController(viewController)
+        }
+        
     }
 }
 
