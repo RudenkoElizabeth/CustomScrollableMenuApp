@@ -5,7 +5,8 @@
 //
 
 class MainInterfaceInteractor: MainInterfaceInteractorInput {
-
+    
     weak var output: MainInterfaceInteractorOutput!
-
+    
+    // Do smthing with server layer
 }

@@ -16,6 +16,7 @@ class MainInterfacePresenter: MainInterfaceModuleInput, MainInterfaceViewOutput,
     }
     
     func changeSelected(item: Int) {
-        print("Change for page: \(item)")
+        let menuItem = MainInterfaceConstants.items[item]
+        router.chngePageFor(item: menuItem.type)
     }
 }

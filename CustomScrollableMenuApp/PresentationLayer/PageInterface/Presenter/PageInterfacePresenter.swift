@@ -9,13 +9,13 @@ class PageInterfacePresenter: PageInterfaceModuleInput, PageInterfaceViewOutput,
     weak var view: PageInterfaceViewInput!
     var interactor: PageInterfaceInteractorInput!
     var router: PageInterfaceRouterInput!
-    var pageType: ItemType!
+    var menuItem: SclollableMenuItem!
     
     func viewIsReady() {
         view.setupInitialState()
     }
     
     func getTitle() -> String? {
-        "Some awersome page"
+        PageInterfaceConstants.title + menuItem.title
     }
 }

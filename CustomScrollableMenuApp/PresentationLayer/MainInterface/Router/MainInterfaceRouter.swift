@@ -18,6 +18,10 @@ class MainInterfaceRouter: MainInterfaceRouterInput {
         setupPages()
     }
     
+    func chngePageFor(item: ItemType) {
+        subtitleMenuModuleInput?.change(item: item)
+    }
+    
     private func setupMenu() {
         let identifier = MainInterfaceConstants.menuIdentifier
         let viewController = UIViewController.instantiateFromStoryboard(identifier)
@@ -33,7 +37,7 @@ class MainInterfaceRouter: MainInterfaceRouterInput {
         MainInterfaceConstants.items.forEach { item in
             let identifier = MainInterfaceConstants.pageIdentifier
             let viewController = UIViewController.instantiateFromStoryboard(identifier)
-            PageInterfaceModuleConfigurator().configureModuleForViewInput(viewInput: viewController, pageType: item.type)
+            PageInterfaceModuleConfigurator().configureModuleForViewInput(viewInput: viewController, menuItem: item)
             view.addViewController(viewController)
         }
         
@@ -42,6 +46,6 @@ class MainInterfaceRouter: MainInterfaceRouterInput {
 
 extension MainInterfaceRouter: SclollableMenuModuleOutput {
     func action(item: ItemType) {
-        print("item \(item)")
+        view.setViewControllerFor(pageType: item)
     }
 }

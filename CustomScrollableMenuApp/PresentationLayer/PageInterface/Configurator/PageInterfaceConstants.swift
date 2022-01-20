@@ -8,5 +8,5 @@
 import Foundation
 
 class PageInterfaceConstants {
-    
+    static let title = "Some awersome interface for "
 }

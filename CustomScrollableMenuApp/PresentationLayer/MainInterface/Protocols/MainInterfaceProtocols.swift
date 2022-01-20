@@ -21,4 +21,5 @@ protocol MainInterfaceInteractorOutput: AnyObject { }
 
 protocol MainInterfaceRouterInput {
     func setupSubmodules()
+    func chngePageFor(item: ItemType)
 }

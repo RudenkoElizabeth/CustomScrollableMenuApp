@@ -9,21 +9,21 @@ import UIKit
 class PageInterfaceModuleConfigurator {
     
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController,
-                                                       pageType: ItemType) {
+                                                       menuItem: SclollableMenuItem) {
         if let viewController = viewInput as? PageInterfaceViewController {
-            configure(viewController: viewController, pageType: pageType)
+            configure(viewController: viewController, menuItem: menuItem)
         }
     }
     
     private func configure(viewController: PageInterfaceViewController,
-                           pageType: ItemType) {
+                           menuItem: SclollableMenuItem) {
         
         let router = PageInterfaceRouter()
         
         let presenter = PageInterfacePresenter()
         presenter.view = viewController
         presenter.router = router
-        presenter.pageType = pageType
+        presenter.menuItem = menuItem
         
         let interactor = PageInterfaceInteractor()
         interactor.output = presenter
